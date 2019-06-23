@@ -39,8 +39,9 @@ app.use(function(req, res, next) {
   next();
 });
 
-mongoose.connect("mongodb://localhost:27017/yelp_camp", {
-  useNewUrlParser: true
+mongoose.connect("mongodb+srv://romiIris:Rumcajs66!@cluster0-ynjna.mongodb.net/test?retryWrites=true&w=majority", {
+  useNewUrlParser: true, 
+  useCreateIndex: true
 });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
